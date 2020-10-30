@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [API Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Users Endpoint Test(failed)">
+    <parameter name="name" value="John Doe Jr."/>
+    <parameter name="userName" value="jdoe"/>
+    <parameter name="email" value="jdoe@nodomain.com"/>
+    <classes>
+      <class name="com.gp.AutomationREST.UsersEndpointTest">
+        <methods>
+          <include name="postUserTest" invocation-numbers="0"/>
+          <include name="deleteUserTest" invocation-numbers="0"/>
+          <include name="postInvalidUserTest"/>
+          <include name="getInvalidParamTest"/>
+        </methods>
+      </class> <!-- com.gp.AutomationREST.UsersEndpointTest -->
+    </classes>
+  </test> <!-- Users Endpoint Test(failed) -->
+  <test thread-count="5" name="Posts Endpoint Test(failed)">
+    <parameter name="id" value="jd1234"/>
+    <parameter name="title" value="REST Automation through REST-assured"/>
+    <parameter name="body" value="This article explains the use of REST-assured framework ...."/>
+    <parameter name="userId" value="jdoe"/>
+    <classes>
+      <class name="com.gp.AutomationREST.PostsEndpointTest">
+        <methods>
+          <include name="deletePostTest" invocation-numbers="0"/>
+          <include name="postInvalidPostTest"/>
+          <include name="getPostsTest" invocation-numbers="0"/>
+          <include name="getInvalidParamTest"/>
+        </methods>
+      </class> <!-- com.gp.AutomationREST.PostsEndpointTest -->
+    </classes>
+  </test> <!-- Posts Endpoint Test(failed) -->
+  <test thread-count="5" name="Comments Endpoint Test(failed)">
+    <parameter name="name" value="John Doe Jr."/>
+    <parameter name="id" value="123456"/>
+    <parameter name="postId" value="22"/>
+    <parameter name="body" value="Great article!"/>
+    <parameter name="email" value="jdoe@nodomain.com"/>
+    <classes>
+      <class name="com.gp.AutomationREST.CommentsEndpointTest">
+        <methods>
+          <include name="postInvalidCommentTest"/>
+          <include name="deleteCommentTest" invocation-numbers="0"/>
+          <include name="getInvalidParamTest"/>
+        </methods>
+      </class> <!-- com.gp.AutomationREST.CommentsEndpointTest -->
+    </classes>
+  </test> <!-- Comments Endpoint Test(failed) -->
+</suite> <!-- Failed suite [API Test Suite] -->
